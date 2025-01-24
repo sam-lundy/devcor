@@ -1,0 +1,27 @@
+curl -H 'Content-Type: application/json' \
+      -d '{ "title":"foo","body":"bar", "id": 1}' \
+      -X POST \
+      https://example.com/posts
+
+
+# multipart/form-data
+## Text Field
+curl -H "Content-type: multipart/form-data" \
+     -F title=foo \
+     -F body=bar \
+     -F id="1" \
+     -X POST \
+     https://example.com/posts
+
+## Image Upload
+curl -H "Content-type: multipart/form-data" \
+     -F profile=@avatar.jpg \
+     https://example.com/avatar.cgi
+
+# application/x-www-form-urlencoded
+curl -H "Content-type: application/x-www-form-urlencoded" \
+     -d "title=foo" \
+     -d "body=bar" \
+     -d "id=1" \
+     -X POST \
+     https://example.com/posts

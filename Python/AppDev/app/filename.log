@@ -1,0 +1,187 @@
+2025-01-24 14:33:47,461 INFO myApi MainThread : script directory: C:\Users\v-samlundy\code\CodeSamples\Python\AppDev\app
+2025-01-24 14:33:47,462 INFO myApi MainThread : DB file: C:\Users\v-samlundy\code\CodeSamples\Python\AppDev\app\db.txt
+2025-01-24 14:33:47,501 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.6.200:5000
+2025-01-24 14:33:47,501 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2025-01-24 14:36:30,844 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [24/Jan/2025 14:36:30] "GET / HTTP/1.1" 200 -
+2025-01-24 14:36:30,891 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [24/Jan/2025 14:36:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-24 14:37:38,381 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [24/Jan/2025 14:37:38] "GET / HTTP/1.1" 200 -
+2025-01-24 14:37:38,402 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [24/Jan/2025 14:37:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-24 14:37:50,921 INFO myApi MainThread : script directory: C:\Users\v-samlundy\code\CodeSamples\Python\AppDev\app
+2025-01-24 14:37:50,923 INFO myApi MainThread : DB file: C:\Users\v-samlundy\code\CodeSamples\Python\AppDev\app\db.txt
+2025-01-24 14:37:50,945 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.6.200:5000
+2025-01-24 14:37:50,945 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2025-01-24 14:37:54,647 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [24/Jan/2025 14:37:54] "GET / HTTP/1.1" 200 -
+2025-01-24 14:37:54,665 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [24/Jan/2025 14:37:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-24 14:38:13,206 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [24/Jan/2025 14:38:13] "GET / HTTP/1.1" 200 -
+2025-01-24 14:38:24,439 WARNING myApi Thread-4 (process_request_thread) : No hostname specified
+2025-01-24 14:38:24,439 ERROR myApi Thread-4 (process_request_thread) : NO HOSTNAME SPECIFIED
+2025-01-24 14:38:24,441 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [24/Jan/2025 14:38:24] "[31m[1mGET /routers HTTP/1.1[0m" 400 -
+2025-01-24 14:38:35,490 INFO myApi Thread-5 (process_request_thread) : Routers returned
+2025-01-24 14:38:35,492 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [24/Jan/2025 14:38:35] "GET /routers?hostname=SW1 HTTP/1.1" 200 -
+2025-01-24 14:45:06,036 INFO myApi Thread-6 (process_request_thread) : inbound record {'hostname': 'R1', 'ipadd': '10.0.0.1'}
+2025-01-24 14:45:06,038 INFO myApi Thread-6 (process_request_thread) : records output [{'hostname': 'SW1', 'ipaddr': '10.12.12.1'}, {'hostname': 'R1', 'ipadd': '10.0.0.1'}]
+2025-01-24 14:45:06,038 WARNING myApi Thread-6 (process_request_thread) : router added R1
+2025-01-24 14:45:06,038 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [24/Jan/2025 14:45:06] "[35m[1mPOST /routers HTTP/1.1[0m" 201 -
+2025-01-24 14:47:04,478 INFO myApi Thread-7 (process_request_thread) : inbound record {'hostname': 'R1', 'ipadd': '10.0.0.1'}
+2025-01-24 14:47:04,488 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [24/Jan/2025 14:47:04] "POST /routers HTTP/1.1" 200 -
+2025-01-24 14:47:40,577 INFO myApi Thread-8 (process_request_thread) : inbound record {'hostame': 'R1', 'ipadd': '10.0.0.1'}
+2025-01-24 14:47:40,579 INFO myApi Thread-8 (process_request_thread) : records output [{'hostname': 'SW1', 'ipaddr': '10.12.12.1'}, {'hostname': 'R1', 'ipadd': '10.0.0.1'}, {'hostame': 'R1', 'ipadd': '10.0.0.1'}]
+2025-01-24 14:47:40,579 ERROR myApi Thread-8 (process_request_thread) : Error during ADD 'hostname'
+2025-01-24 14:47:40,579 ERROR myApi Thread-8 (process_request_thread) : Exception on /routers [POST]
+Traceback (most recent call last):
+  File "c:\Users\v-samlundy\code\CodeSamples\Python\AppDev\app\myApi.py", line 71, in addRouter
+    LOG.warning(f'router added {record["hostname"]}')
+                                ~~~~~~^^^^^^^^^^^^
+KeyError: 'hostname'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\v-samlundy\code\CodeSamples\Python\AppDev\app\myApi.py", line 77, in addRouter
+    return jsonify({"error": err})
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\v-samlundy\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type KeyError is not JSON serializable
+2025-01-24 14:47:40,682 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [24/Jan/2025 14:47:40] "[35m[1mPOST /routers HTTP/1.1[0m" 500 -
+2025-01-24 15:02:33,473 ERROR myApi Thread-9 (process_request_thread) : ERROR RAISED: 'hostname'
+2025-01-24 15:02:33,473 ERROR myApi Thread-9 (process_request_thread) : Exception on /routers [DELETE]
+Traceback (most recent call last):
+  File "c:\Users\v-samlundy\code\CodeSamples\Python\AppDev\app\myApi.py", line 91, in deleteRouter
+    if r['hostname'] == record['hostname']:
+                        ~~~~~~^^^^^^^^^^^^
+KeyError: 'hostname'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\v-samlundy\code\CodeSamples\Python\AppDev\app\myApi.py", line 100, in deleteRouter
+    return jsonify({"error": err})
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\v-samlundy\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type KeyError is not JSON serializable
+2025-01-24 15:02:33,475 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [24/Jan/2025 15:02:33] "[35m[1mDELETE /routers HTTP/1.1[0m" 500 -
+2025-01-24 15:03:04,047 INFO myApi MainThread : script directory: C:\Users\v-samlundy\code\CodeSamples\Python\AppDev\app
+2025-01-24 15:03:04,047 INFO myApi MainThread : DB file: C:\Users\v-samlundy\code\CodeSamples\Python\AppDev\app\db.txt
+2025-01-24 15:03:04,087 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.6.200:5000
+2025-01-24 15:03:04,087 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2025-01-24 15:03:12,739 ERROR myApi Thread-1 (process_request_thread) : ERROR RAISED: 'hostname'
+2025-01-24 15:03:12,739 ERROR myApi Thread-1 (process_request_thread) : Exception on /routers [DELETE]
+Traceback (most recent call last):
+  File "c:\Users\v-samlundy\code\CodeSamples\Python\AppDev\app\myApi.py", line 91, in deleteRouter
+    if r['hostname'] == record['hostname']:
+                        ~~~~~~^^^^^^^^^^^^
+KeyError: 'hostname'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\v-samlundy\code\CodeSamples\Python\AppDev\app\myApi.py", line 100, in deleteRouter
+    return jsonify({"error": err})
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\v-samlundy\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\v-samlundy\code\.venv\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type KeyError is not JSON serializable
+2025-01-24 15:03:12,816 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [24/Jan/2025 15:03:12] "[35m[1mDELETE /routers HTTP/1.1[0m" 500 -
+2025-01-24 15:03:42,431 WARNING myApi Thread-2 (process_request_thread) : Deleted R1
+2025-01-24 15:03:42,434 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [24/Jan/2025 15:03:42] "[35m[1mDELETE /routers HTTP/1.1[0m" 204 -
